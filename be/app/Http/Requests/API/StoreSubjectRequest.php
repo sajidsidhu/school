@@ -24,8 +24,8 @@ class StoreSubjectRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>'required',
-            'description'=>'required'
+            'name'=>'required|min:3',
+            'description'=>'required|min:3'
         ];
     }
 }

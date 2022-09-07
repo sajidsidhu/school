@@ -1,0 +1,143 @@
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1>Add Teacher</h1>
+        </div>
+        <div class="col-sm-6">
+          <ol class="breadcrumb float-sm-right">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item">Teachers</li>
+            <li class="breadcrumb-item active">Add</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-12">
+          <div class="card">
+            <div class="card-header">
+              <h3 class="card-title">Form</h3>
+            </div>
+            <!-- /.card-header -->
+            <div class="card-body">
+              <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Enter Name"
+                        formControlName="name"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="email"
+                        placeholder="Enter Email"
+                        formControlName="email"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="qualification">Qualification</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="qualification"
+                        placeholder="Enter Qualification"
+                        formControlName="qualification"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="password">Password</label>
+                      <input
+                        type="password"
+                        class="form-control"
+                        id="password"
+                        placeholder="Enter Password"
+                        formControlName="password"
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="Joining">Joining Date</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="Joining"
+                        placeholder="yyyy-mm-dd"
+                        formControlName="starting_date"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="CheckIn">CheckIn Time</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="CheckIn"
+                        placeholder="HH:mm:ss"
+                        formControlName="time_from"
+                      />
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="Checkout">CheckOut Time</label>
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="Checkout"
+                        placeholder="HH:mm:ss"
+                        formControlName="time_to"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col mt-3">
+                    <button class="btn btn-md btn-primary float-right">Add</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <!-- /.card-body -->
+          </div>
+          <!-- /.card -->
+        </div>
+        <!-- /.col -->
+      </div>
+      <!-- /.row -->
+    </div>
+    <!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>

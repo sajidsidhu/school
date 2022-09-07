@@ -49,7 +49,7 @@ class RegisterController extends Controller
             return $this->sendResponse(['token'=>$token], 'User login successfully.');
         } 
         else{ 
-            return $this->sendError('Unauthorised.', ['error'=>'Unauthorised']);
+            return $this->sendError('invalid login detail.', ['error'=>'invalid login detail'],422);
         } 
     }
 }

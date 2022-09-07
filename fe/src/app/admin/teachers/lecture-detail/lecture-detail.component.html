@@ -1,0 +1,81 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Schedule Details</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a routerLink="/admin/home">Home</a></li>
+              <li class="breadcrumb-item active"><a routerLink="/admin/teachers">Teachers</a></li>
+              <li class="breadcrumb-item active">Schedule Detail</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+  
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Teacher schedule details</h3>
+
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+
+                <h4>{{TeacherDetail.name}}</h4>
+                <div class="row mb-2">
+                    <div class="col">
+                        <b>Name: </b>
+                        <span>{{TeacherDetail.name}}</span>
+                    </div>
+                    <div class="col">
+                        <b>Qualification: </b>
+                        <span>{{TeacherDetail.qualification}}</span>
+                    </div>
+                    <div class="col">
+                        <b>Timing: </b>
+                        <span>{{TeacherDetail.time_from+' - '+TeacherDetail.time_to}}</span>
+                    </div>
+                </div>
+
+                <table id="example2" class="table table-bordered table-hover mt-3">
+                  <thead>
+                    <tr>
+                      <th>Class</th>
+                      <th>Subject</th>
+                      <th>Timing</th>
+                      <th>Duration</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let t of TeacherLectures">
+                      <th> {{ t.class }}</th>
+                      <th>{{ t.subject }}</th>
+                      <th>{{ t.start_time +' - '+t.end_time }}</th>
+                      <th>{{ t.duration }}</th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  

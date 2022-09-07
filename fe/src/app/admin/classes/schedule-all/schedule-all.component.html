@@ -1,0 +1,68 @@
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Schedules</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item active">Schedules</li>
+            </ol>
+          </div>
+        </div>
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+  
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="card">
+              <div class="card-header">
+                <h3 class="card-title">Classes weekly schedules</h3>
+              </div>
+              <!-- /.card-header -->
+              <div class="card-body">
+                <table id="example2" class="table table-bordered table-hover">
+                  <thead>
+                    <tr>
+                      <th>Class Name</th>
+                      <th>Monday</th>
+                      <th>Tuesday</th>
+                      <th>Wednesday</th>
+                      <th>Thresday</th>
+                      <th>Friday</th>
+                      <th>Saturday</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr *ngFor="let t of List.data">
+                      <th> {{ t.name }}</th>
+                      <th><a routerLink="/admin/class/schedule-detail/{{t.id}}/mo">{{ t.monday_lec }}</a></th>
+                      <th><a routerLink="/admin/class/schedule-detail/{{t.id}}/tu">{{ t.tuesday_lec }}</a></th>
+                      <th><a routerLink="/admin/class/schedule-detail/{{t.id}}/we">{{ t.wednesday_lec }}</a></th>
+                      <th><a routerLink="/admin/class/schedule-detail/{{t.id}}/th">{{ t.thrusday_lec }}</a></th>
+                      <th><a routerLink="/admin/class/schedule-detail/{{t.id}}/fr">{{ t.friday_lec }}</a></th>
+                      <th><a routerLink="/admin/class/schedule-detail/{{t.id}}/sa">{{ t.saturday_lec }}</a></th>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <!-- /.card-body -->
+            </div>
+            <!-- /.card -->
+          </div>
+          <!-- /.col -->
+        </div>
+        <!-- /.row -->
+      </div>
+      <!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  
